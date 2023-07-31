@@ -8,7 +8,7 @@ const checkWorkingHours = (req, res, next) => {
   const dayOfWeek = now.getDay(); // 0: dimanche, 1: lundi, ..., 6: samedi
   const hour = now.getHours();
 
-  if (dayOfWeek >= 1 && dayOfWeek <= 5 && hour >= 9 && hour < 17) {
+  if (dayOfWeek >= 1 && dayOfWeek <= 5 && hour >= 9 && hour < 23) {
     // C'est un jour ouvrable entre 9h et 17h, continuez
     next();
   } else {
@@ -26,14 +26,23 @@ app.set('view engine', 'ejs');
 
 // Routes
 app.get('/', (req, res) => {
+  const student = {
+    name: 'rouguiyatou',
+    email:'rouguiyatoudiallo700@gmail.com',
+ }
   res.render('index', { currentPage: 'Accueil' });
 });
 
-app.get('/services', (req, res) => {
-  res.render('services', { currentPage: 'Nos services' });
+app.get('/service', (req, res) => {
+  res.render('service', { currentPage: 'Nos services' });
 });
 
 app.get('/contact', (req, res) => {
+  const student = {
+    name: 'rouguiyatou',
+    email:'rouguiyatoudiallo700@gmail.com',
+    phonenumber: '78 473 66 69',
+ }
   res.render('contact', { currentPage: 'Contactez-nous' });
 });
 

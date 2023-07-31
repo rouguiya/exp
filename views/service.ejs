@@ -3,20 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <title>Nos services</title>
-  <link rel="stylesheet" href="/styles.css">
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  header {
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+  nav a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  nav a.active {
+    font-weight: bold;
+  }
+  
+  h1 {
+    color: #007bff;
+  }
+ </style>
 </head>
 <body>
   <header>
     <nav>
       <ul>
         <li><a class="<%= currentPage === 'Accueil' ? 'active' : '' %>" href="/">Accueil</a></li>
-        <li><a class="<%= currentPage === 'Nos services' ? 'active' : '' %>" href="/services">Nos services</a></li>
+        <li><a class="<%= currentPage === 'Nos services' ? 'active' : '' %>" href="/service">Nos services</a></li>
         <li><a class="<%= currentPage === 'Contactez-nous' ? 'active' : '' %>" href="/contact">Contactez-nous</a></li>
       </ul>
     </nav>
   </header>
-  <h1>Nos services</h1>
-  <p>Ici, vous pouvez trouver une liste de nos services.</p>
-</body>
+          <h1>Nos services</h1>
+          <p>Ici, vous pouvez trouver une liste de nos services.</p>
+  </body>
 </html>
 
